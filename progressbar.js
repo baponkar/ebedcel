@@ -28,7 +28,7 @@ function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
 function startTimer() {
   // Set the countdown time in seconds (e.g., 10 minutes = 600 seconds)
   const countdownTime = getTotalSecondsToDateTime( 2024, 6, 28, 16, 0, 0 );
-  //const countdownTime = 438800;
+  //const countdownTime = 2;
   timeLeft = countdownTime;
   
   // Update the timer every second
@@ -52,7 +52,7 @@ function updateTimer() {
   } else {
     clearInterval(timer);
     time_blocks.style.display = "none";
-    time_blocks_title.textContent = "28th June 2024, 16 : 00 : 00";
+    time_blocks_title.innerHTML = "<br> It is 28th June 2024,<br> 16 : 00 : 00 IST <br> End of B.Ed!";
   }
 }
 

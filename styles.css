@@ -1,6 +1,9 @@
 
 body {
-    background : black;
+    background-image: url('images/sea-2563389.jpg');
+    background-size: cover; /* or contain, depending on your requirement */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +17,7 @@ body {
 
 h1 {
     text-transform: uppercase;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     word-spacing: 0.5em;
     font-weight: 400;
     transform: scale(1, 1.5);
