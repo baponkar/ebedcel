@@ -201,8 +201,8 @@ function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
 
 
 // Set a delay (in milliseconds) before starting the fireworks
-var delay = getTotalSecondsToDateTime(2024, 6, 28, 16, 0, 0) * 1000; // 10000 milliseconds = 10 seconds
-//var delay = 1000;
+//var delay = getTotalSecondsToDateTime(2024, 6, 28, 16, 0, 0) * 1000; // 10000 milliseconds = 10 seconds
+var delay = 438800 * 1000;
 
 
 // Function to start fireworks after the specified delay
