@@ -1,9 +1,6 @@
 let timer;
 let timeLeft = 0;
-let days = 0;
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
+
 
 var time_blocks =   document.getElementById('time-blocks');
 var time_blocks_title =   document.getElementById('time-blocks-title')
@@ -30,8 +27,8 @@ function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
 
 function startTimer() {
   // Set the countdown time in seconds (e.g., 10 minutes = 600 seconds)
-  //const countdownTime = getTotalSecondsToDateTime(2024,6,28,16,0,0);
-  const countdownTime = 1;
+  const countdownTime = getTotalSecondsToDateTime( 2024, 6, 28, 16, 0, 0 );
+  //const countdownTime = 1;
   timeLeft = countdownTime;
   
   // Update the timer every second
@@ -41,10 +38,10 @@ function startTimer() {
 function updateTimer() {
   
   if (timeLeft > 0) {
-    days = Math.floor(timeLeft / 86400)
-    hours = Math.floor((timeLeft - (days * 86400)) /3600);
-    minutes = Math.floor((timeLeft % 3600) / 60);
-    seconds = timeLeft % 60;
+    const days = Math.floor(timeLeft / 86400)
+    const hours = Math.floor((timeLeft - (days * 86400)) /3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = timeLeft % 60;
     
     document.getElementById('days').textContent = days;
     document.getElementById('hours').textContent = hours;

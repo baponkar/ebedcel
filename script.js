@@ -1,4 +1,4 @@
-var audio = document.getElementById('firecrackerSound');
+var audio = document.getElementById('crackerAudio');
 
 
 
@@ -105,26 +105,26 @@ function launch(N) {
 }
 
 function bang(N) {
-    //playAudio();
-  var i, Z, A=0;
-  for (i=bits*N; i<bits+bits*N; i++) { 
-    Z=stars[i].style;
-    Z.left=Xpos[i]+"px";
-    Z.top=Ypos[i]+"px";
-    if (decay[i]) decay[i]--;
-    else A++;
-    if (decay[i]==15) Z.fontSize="7px";
-    else if (decay[i]==7) Z.fontSize="2px";
-    else if (decay[i]==1) Z.visibility="hidden";
-	if (decay[i]>1 && Math.random()<.1) {
-	   Z.visibility="hidden";
-	   setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
-	}
-    Xpos[i]+=dX[i];
-    Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+    playAudio();
+    var i, Z, A=0;
+    for (i=bits*N; i<bits+bits*N; i++) { 
+      Z=stars[i].style;
+      Z.left=Xpos[i]+"px";
+      Z.top=Ypos[i]+"px";
+      if (decay[i]) decay[i]--;
+      else A++;
+      if (decay[i]==15) Z.fontSize="7px";
+      else if (decay[i]==7) Z.fontSize="2px";
+      else if (decay[i]==1) Z.visibility="hidden";
+    if (decay[i]>1 && Math.random()<.1) {
+      Z.visibility="hidden";
+      setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
+    }
+      Xpos[i]+=dX[i];
+      Ypos[i]+=(dY[i]+=1.25/intensity[N]);
 
-  }
-  if (A!=bits) setTimeout("bang("+N+")", speed);
+    }
+    if (A!=bits) setTimeout("bang("+N+")", speed);
 }
 
 function stepthrough(N) { 
@@ -179,7 +179,7 @@ function set_width() {
   swide=sw_min;
   shigh=sh_min;
 }
-// ]]>
+
 
 
 function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
@@ -201,8 +201,8 @@ function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
 
 
 // Set a delay (in milliseconds) before starting the fireworks
-//var delay = getTotalSecondsToDateTime(2024,6,28,16,0,0) * 1000; // 10000 milliseconds = 10 seconds
-var delay = 1000;
+var delay = getTotalSecondsToDateTime(2024, 6, 28, 16, 0, 0) * 1000; // 10000 milliseconds = 10 seconds
+//var delay = 1000;
 
 
 // Function to start fireworks after the specified delay
