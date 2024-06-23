@@ -1,5 +1,7 @@
 
+
 body {
+    background-color: #2f3435;
     background-image: url('images/sea-2563389.jpg');
     background-size: cover; /* or contain, depending on your requirement */
     background-repeat: no-repeat; /* Ensures the image doesn't repeat */
@@ -44,7 +46,7 @@ h1 {
 
 .side-text {
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
     left: 0;
     transform: rotate(270deg);
     transform-origin: 0 0;
@@ -74,6 +76,7 @@ h1 {
 
     .side-text {
         font-size: 20px;
+        bottom: -20px;
     }
 
     .time-text {
@@ -99,9 +102,11 @@ h1 {
 
     .side-text {
         font-size: 18px;
+        bottom: -15px;
     }
 
     .time-text {
         font-size: 30px;
+        
     }
 }
