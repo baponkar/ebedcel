@@ -52,7 +52,7 @@ function updateTimer() {
   } else {
     clearInterval(timer);
     time_blocks.style.display = "none";
-    time_blocks_title.style.display = "none";
+    time_blocks_title.textContent = "28th June 2024, 16 : 00 : 00";
   }
 }
 
