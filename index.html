@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet">
+        <title>Firecracker Animation</title>
+    </head>
+
+    <body>
+        
+        <h1 id="time-blocks-title">Please Wait....</h1>
+        <div class="time-blocks" id="time-blocks">
+            <div class="block"><span class="side-text">DAYS</span><span class="time-text" id = "days">0</span></div>
+            <div class="block"><span class="side-text">HOURS</span><span class="time-text" id = "hours">0</span></div>
+            <div class="block"><span class="side-text">MINUTES</span><span class="time-text" id = "minutes">0</span></div>
+            <div class="block"><span class="side-text">SECONDS</span><span class="time-text" id = "seconds">0</span></div>
+        </div>
+
+        <div id="audio">
+            <audio id="firecrackerSound"  preload="auto" src="audio/firecracker-sparkling-202928.mp3">
+                Your Browser do not support audio
+            </audio>
+        
+            <audio id="backgroundSound" preload="auto" src="audio/classic-190488.mp3" autoplay loop>
+                Your Browser do not support audio
+            </audio>
+        </div>
+        
+        <script src="script.js"></script>
+        <script src="progressbar.js"></script>
+    </body>
+</html>
