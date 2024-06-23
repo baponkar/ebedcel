@@ -27,8 +27,8 @@ function getTotalSecondsToDateTime(year, month, day, hours, minutes, seconds) {
 
 function startTimer() {
   // Set the countdown time in seconds (e.g., 10 minutes = 600 seconds)
-  //const countdownTime = getTotalSecondsToDateTime( 2024, 6, 28, 16, 0, 0 );
-  const countdownTime = 438800;
+  const countdownTime = getTotalSecondsToDateTime( 2024, 6, 28, 16, 0, 0 );
+  //const countdownTime = 438800;
   timeLeft = countdownTime;
   
   // Update the timer every second
